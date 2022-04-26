@@ -225,7 +225,7 @@ header h1 figure img {
   text-align: right;
 }
 
-#restaurants a article i:active {
+#restaurants a article i:focus {
   color: #9356dc;
 }
 

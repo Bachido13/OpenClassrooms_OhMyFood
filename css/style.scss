@@ -172,7 +172,7 @@ header {
             i:nth-child(3) {
                 text-align: right;
             }
-            i:active {
+            i:focus {
                 color: $primaire;
             }
         }
