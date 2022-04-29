@@ -1,4 +1,19 @@
-main {
-  background: url(../../images/restaurants/alafrancaise.jpg);
+@font-face {
+  font-family: "shrikhand";
+  src: url("police/shrikhand/Shrikhand-Regular.ttf");
+}
+
+@font-face {
+  font-family: "roboto_text";
+  src: url("police/roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+  font-family: "roboto_titre";
+  src: url(police/roboto/Roboto-Medium.ttf);
+}
+
+body {
+  margin: 0;
 }
 /*# sourceMappingURL=menus.css.map */
