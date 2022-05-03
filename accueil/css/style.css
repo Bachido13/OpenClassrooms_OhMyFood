@@ -315,12 +315,12 @@ header h1 figure img {
   opacity: 1;
 }
 
-#restaurants a .card .coeur:focus .fa-regular:focus {
-  display: none;
+#restaurants a .card .coeur:focus .fa-regular {
+  opacity: 0;
 }
 
-#restaurants a .card .coeur:focus .fa-solid:focus {
-  display: block;
+#restaurants a .card .coeur:focus .fa-solid {
+  opacity: 1;
 }
 
 footer {

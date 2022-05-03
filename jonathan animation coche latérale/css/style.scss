@@ -1,0 +1,102 @@
+@keyframes appear-top {
+    0% {
+        transform: translateY(-60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+body {
+    margin: 0;
+    background-color: rgb(234, 225, 225);
+}
+
+.menus-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        opacity: 0;
+        background-color: white;
+        border-radius: 10px;
+        margin: 10px auto;
+        width: 90%;
+        max-width: 500px;
+        padding: 10px;
+        position: relative;
+        overflow: hidden;
+        animation: appear-top 1.5s ease-out forwards;
+        &:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+        &:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        h3, .menu-item__plat-desc, .menu-item__plat-price {
+            border: 1px solid;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        h3, .menu-item__plat-price {
+            width: 100%;
+        }
+
+        .menu-item__plat-desc {
+            width: 80%;
+        }
+
+        .menu-item__plat-price {
+            text-align: right;
+            margin-top: -36px;
+        }
+
+        aside {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -25%;
+            background-color: green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            i {
+                color: white;
+                font-size: 20px;
+            }
+        }
+
+        &:hover, &:active {
+            h3, .menu-item__plat-price {
+                transition: width 1s ease-out;
+                width: 75%;
+            }
+
+            .menu-item__plat-desc {
+                transition: width 1s ease-out;
+                width: 55%;
+            }
+            
+            aside {
+                transition: right 1s ease-out;
+                right: 0;
+                i {
+                    transition: transform 1s ease-out;
+                    transform: rotate(-360deg);
+                }
+            }
+  
+        }
+    }
+}

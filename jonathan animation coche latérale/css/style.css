@@ -1,0 +1,133 @@
+@-webkit-keyframes appear-top {
+  0% {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appear-top {
+  0% {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: #eae1e1;
+}
+
+.menus-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menus-list li {
+  opacity: 0;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 500px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  -webkit-animation: appear-top 1.5s ease-out forwards;
+          animation: appear-top 1.5s ease-out forwards;
+}
+
+.menus-list li:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.menus-list li:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.menus-list li h3, .menus-list li .menu-item__plat-desc, .menus-list li .menu-item__plat-price {
+  border: 1px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menus-list li h3, .menus-list li .menu-item__plat-price {
+  width: 100%;
+}
+
+.menus-list li .menu-item__plat-desc {
+  width: 80%;
+}
+
+.menus-list li .menu-item__plat-price {
+  text-align: right;
+  margin-top: -36px;
+}
+
+.menus-list li aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -25%;
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.menus-list li aside i {
+  color: white;
+  font-size: 20px;
+}
+
+.menus-list li:hover h3, .menus-list li:hover .menu-item__plat-price, .menus-list li:active h3, .menus-list li:active .menu-item__plat-price {
+  -webkit-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+  width: 75%;
+}
+
+.menus-list li:hover .menu-item__plat-desc, .menus-list li:active .menu-item__plat-desc {
+  -webkit-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+  width: 55%;
+}
+
+.menus-list li:hover aside, .menus-list li:active aside {
+  -webkit-transition: right 1s ease-out;
+  transition: right 1s ease-out;
+  right: 0;
+}
+
+.menus-list li:hover aside i, .menus-list li:active aside i {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+/*# sourceMappingURL=style.css.map */

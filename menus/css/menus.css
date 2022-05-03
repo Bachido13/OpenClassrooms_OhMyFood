@@ -60,9 +60,6 @@ header h1 figure img {
 
 main figure {
   margin: 0;
-  overflow: hidden;
-  z-index: 1;
-  position: relative;
 }
 
 main figure img {
@@ -107,13 +104,13 @@ main section #titre .coeur {
 
 main section #titre .coeur i {
   font-size: 30px;
-  padding: 5px 15px 0 0;
+  padding: 5px 25px 0 0;
 }
 
 main section #titre .coeur .fa-regular {
   position: relative;
-  margin-right: -30px;
   padding: 0;
+  margin-right: -30px;
   color: black;
   opacity: 1;
   -webkit-transition: opacity 1s;
@@ -123,6 +120,7 @@ main section #titre .coeur .fa-regular {
 main section #titre .coeur .fa-solid {
   color: #9356dc;
   position: relative;
+  margin-right: 20px;
   padding: 0;
   opacity: 0;
   -webkit-transition: opacity 1s;
@@ -153,27 +151,29 @@ main section .menu h3 {
 main section .menu ul {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 main section .menu ul li {
   background-color: white;
-  list-style: none;
   border-radius: 15px;
-  margin-bottom: 20px;
+  margin: 10px auto;
+  width: 95%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 main section .menu ul li a {
   margin: 0;
+  padding: 10px;
   color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-decoration: none;
   cursor: pointer;
 }
 
 main section .menu ul li a article {
-  padding: 10px;
   width: 100%;
 }
 
@@ -205,36 +205,31 @@ main section .menu ul li a article div span {
   font-weight: bold;
   font-size: 12px;
   font-family: "roboto_titre", "roboto_text", arial;
-  padding-right: 10px;
 }
 
-main section .menu ul li a aside {
-  display: none;
+main section .menu ul li aside {
+  position: absolute;
+  height: 59px;
+  right: -15%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99e2d0;
-  width: 70px;
-  height: 63px;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: display 300ms;
-  transition: display 300ms;
 }
 
-main section .menu ul li a aside i {
+main section .menu ul li aside i {
   background-color: #99e2d0;
   color: white;
   font-size: 20px;
-}
-
-main section .menu ul li a:focus aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 main section #btn form {

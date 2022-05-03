@@ -230,11 +230,11 @@ header {
                 }
             }
             .coeur:focus {
-                .fa-regular:focus {
-                    display: none;
+                .fa-regular {
+                    opacity:0;
                 }
-                .fa-solid:focus {
-                    display: block;
+                .fa-solid {
+                    opacity:1;
                 }
             }
         }

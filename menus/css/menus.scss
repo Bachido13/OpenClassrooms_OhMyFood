@@ -27,22 +27,28 @@ body {
 header {
     display: flex;
     align-items: center;
+
     div {
         padding-left: 20px;
+
         a {
             text-decoration: none;
             color: black;
+
             i{
                 text-decoration: none;
             }
         }
     }
+
     h1 {
         margin: 10px 0 10px -10px;
+
         figure {
             margin: 0;
             display: flex;
             justify-content: center;
+
             img {
                 display: block;
                 width: 50%;
@@ -52,17 +58,17 @@ header {
 }
 
 main {
+
     figure {
         margin: 0;
-        overflow: hidden;
-        z-index: 1;
-        position: relative;
+
         img {
             width: 100%;
             height: 250px;
             object-fit: cover;
         }
     }
+
     section {
         background-color: rgb(245, 245, 245);
         border-radius: 25px;
@@ -70,25 +76,30 @@ main {
         z-index: 2;
         position: relative;        
         padding: 20px 10px;
+
         #titre {
             display: flex;
             justify-content: space-between;
+
             h2 {
                 margin: 0;
                 font-family: $logo;
                 font-weight: lighter;
             }
+
             .coeur {
                 display: flex;
                 align-items: center;
+
                 i{
                     font-size: 30px;
-                    padding: 5px 15px 0 0;
+                    padding: 5px 25px 0 0;
                 }
+
                 .fa-regular {
                     position: relative;
-                    margin-right:-30px;
                     padding: 0;
+                    margin-right: -30px;
                     color:black;
                     opacity:1;
                     transition: opacity 1s;
@@ -97,59 +108,77 @@ main {
                 .fa-solid {
                     color: #9356dc;
                     position: relative;
+                    margin-right: 20px;
                     padding: 0;
                     opacity:0;
                     transition: opacity 1s;
                 }
             }
+
             .coeur:active {
+
                 .fa-regular {
                     opacity:0;
                 }
+
                 .fa-solid {
                     opacity:1;
                 }
             }
+
             .coeur:focus {
+
                 .fa-regular:focus {
                     display: none;
                 }
+
                 .fa-solid:focus {
                     display: block;
                 }
             }
         }
+
         .menu {
+
             h3 {
                 font-family: $texte;
                 font-size: 14px;
             }
+
             ul {
                 margin: 0;
                 padding: 0;
+                list-style: none;
+
                 li {
                     background-color: white;
-                    list-style: none;
                     border-radius: 15px;
-                    margin-bottom: 20px;
+                    margin: 10px auto;
+                    width: 95%;
+                    overflow: hidden;
+                    display: flex;
+
                     a {
                         margin: 0;
+                        padding: 10px;
                         color: black;
-                        display: flex;
                         text-decoration: none;
                         cursor: pointer;
+
                         article {
-                            padding: 10px;
                             width: 100%;
+
                             h4 {
                                 font-family: $titre;
                                 font-weight: lighter;
                                 margin: 0;
                             }
+
                             div {
                                 display: flex;
                                 justify-content: space-between;
                                 padding-top: 5px;
+
                                 p {
                                     font-weight: bold;
                                     font-size: 12px;                                   
@@ -157,43 +186,44 @@ main {
                                     text-align: center;
                                     font-family: $texte;
                                 }
+
                                 span {
                                     font-weight: bold;
                                     font-size: 12px;
                                     font-family: $titre;
-                                    padding-right: 10px;
                                 }
                             }
                         }
-                        aside {
-                            display: none;
-                            border-top-right-radius: 15px;
-                            border-bottom-right-radius: 15px;
-                            background-color: $tertiaire;
-                            width: 70px;
-                            height: 63px;                            
-                            justify-content: center;
-                            align-items: center;
-                            transition: display 300ms;
-                            i {
-                                background-color: $tertiaire;
-                                color: white;
-                                font-size: 20px;
-                            }
-                        }
                     }
-                    a:focus {
-                        aside {
-                            display: flex;;
+
+                    aside {
+                        position: absolute;
+                        height: 59px;
+                        right: -15%;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        background-color: $tertiaire;
+                        width: 15%;
+                        display: flex;                              
+                        justify-content: center;
+                        align-items: center;
+
+                        i {
+                            background-color: $tertiaire;
+                            color: white;
+                            font-size: 20px;
                         }
                     }
                 }
             }
         }
+
         #btn {
+
             form {
                 display: flex;
                 justify-content: center;
+
                 button {
                     background: linear-gradient(to top left, $primaire, $secondaire);
                     color: white;
@@ -213,6 +243,7 @@ main {
 footer {
     background-color: rgb(45, 45, 45);
     padding: 20px 0 ;
+
     h1 {
         font-family: $logo;
         font-size: 15px;
@@ -220,16 +251,20 @@ footer {
         margin-left: 40px;
         color: white;
     }
+
     ul {
         list-style: none;
+
         li{
             padding-bottom: 5px;
+
             a {
                 font-family: $texte;
                 font-size: 13px;
                 font-weight: bold;
                 color: white;
                 text-decoration: none;
+
                 i {
                     margin-right: 5px;
                     font-size: 10px;
