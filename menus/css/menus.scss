@@ -87,44 +87,123 @@ main {
                 }
                 .fa-regular {
                     position: relative;
-                    z-index: 2;
+                    margin-right:-30px;
                     padding: 0;
-                    color: $primaire;
+                    color:black;
+                    opacity:1;
+                    transition: opacity 1s;
+                }
+                  
+                .fa-solid {
+                    color: #9356dc;
+                    position: relative;
+                    padding: 0;
+                    opacity:0;
+                    transition: opacity 1s;
+                }
+            }
+            .coeur:active {
+                .fa-regular {
+                    opacity:0;
                 }
                 .fa-solid {
-                    color: $primaire;
-                    position: relative;                    
-                    padding: 0;
-                    z-index: 1;
+                    opacity:1;
+                }
+            }
+            .coeur:focus {
+                .fa-regular:focus {
+                    display: none;
+                }
+                .fa-solid:focus {
+                    display: block;
                 }
             }
         }
         .menu {
             h3 {
                 font-family: $texte;
+                font-size: 14px;
             }
             ul {
+                margin: 0;
+                padding: 0;
                 li {
+                    background-color: white;
+                    list-style: none;
+                    border-radius: 15px;
+                    margin-bottom: 20px;
                     a {
+                        margin: 0;
+                        color: black;
+                        display: flex;
+                        text-decoration: none;
+                        cursor: pointer;
                         article {
+                            padding: 10px;
+                            width: 100%;
                             h4 {
                                 font-family: $titre;
+                                font-weight: lighter;
+                                margin: 0;
                             }
                             div {
+                                display: flex;
+                                justify-content: space-between;
+                                padding-top: 5px;
                                 p {
+                                    font-weight: bold;
+                                    font-size: 12px;                                   
+                                    margin: 0;
+                                    text-align: center;
                                     font-family: $texte;
-                                    span {
-                                        font-weight: bold;
-                                    }
+                                }
+                                span {
+                                    font-weight: bold;
+                                    font-size: 12px;
+                                    font-family: $titre;
+                                    padding-right: 10px;
                                 }
                             }
                         }
                         aside {
+                            display: none;
+                            border-top-right-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                            background-color: $tertiaire;
+                            width: 70px;
+                            height: 63px;                            
+                            justify-content: center;
+                            align-items: center;
+                            transition: display 300ms;
                             i {
                                 background-color: $tertiaire;
+                                color: white;
+                                font-size: 20px;
                             }
                         }
                     }
+                    a:focus {
+                        aside {
+                            display: flex;;
+                        }
+                    }
+                }
+            }
+        }
+        #btn {
+            form {
+                display: flex;
+                justify-content: center;
+                button {
+                    background: linear-gradient(to top left, $primaire, $secondaire);
+                    color: white;
+                    border: none;
+                    border-radius: 25px;
+                    margin: 15px 0 50px 0;
+                    padding: 12px 40px;
+                    font-size: 15px;
+                    font-family: $texte;
+                    font-weight: bold;
                 }
             }
         }

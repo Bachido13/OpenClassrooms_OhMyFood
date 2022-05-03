@@ -112,36 +112,151 @@ main section #titre .coeur i {
 
 main section #titre .coeur .fa-regular {
   position: relative;
-  z-index: 2;
+  margin-right: -30px;
   padding: 0;
-  color: #9356dc;
+  color: black;
+  opacity: 1;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 main section #titre .coeur .fa-solid {
   color: #9356dc;
   position: relative;
   padding: 0;
-  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+main section #titre .coeur:active .fa-regular {
+  opacity: 0;
+}
+
+main section #titre .coeur:active .fa-solid {
+  opacity: 1;
+}
+
+main section #titre .coeur:focus .fa-regular:focus {
+  display: none;
+}
+
+main section #titre .coeur:focus .fa-solid:focus {
+  display: block;
 }
 
 main section .menu h3 {
   font-family: "roboto_text", arial, sans-serif;
+  font-size: 14px;
+}
+
+main section .menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+main section .menu ul li {
+  background-color: white;
+  list-style: none;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+main section .menu ul li a {
+  margin: 0;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+main section .menu ul li a article {
+  padding: 10px;
+  width: 100%;
 }
 
 main section .menu ul li a article h4 {
   font-family: "roboto_titre", "roboto_text", arial;
+  font-weight: lighter;
+  margin: 0;
+}
+
+main section .menu ul li a article div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 5px;
 }
 
 main section .menu ul li a article div p {
+  font-weight: bold;
+  font-size: 12px;
+  margin: 0;
+  text-align: center;
   font-family: "roboto_text", arial, sans-serif;
 }
 
-main section .menu ul li a article div p span {
+main section .menu ul li a article div span {
   font-weight: bold;
+  font-size: 12px;
+  font-family: "roboto_titre", "roboto_text", arial;
+  padding-right: 10px;
+}
+
+main section .menu ul li a aside {
+  display: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99e2d0;
+  width: 70px;
+  height: 63px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: display 300ms;
+  transition: display 300ms;
 }
 
 main section .menu ul li a aside i {
   background-color: #99e2d0;
+  color: white;
+  font-size: 20px;
+}
+
+main section .menu ul li a:focus aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main section #btn form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main section #btn form button {
+  background: -webkit-gradient(linear, right bottom, left top, from(#9356dc), to(#ff79da));
+  background: linear-gradient(to top left, #9356dc, #ff79da);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  margin: 15px 0 50px 0;
+  padding: 12px 40px;
+  font-size: 15px;
+  font-family: "roboto_text", arial, sans-serif;
+  font-weight: bold;
 }
 
 footer {
