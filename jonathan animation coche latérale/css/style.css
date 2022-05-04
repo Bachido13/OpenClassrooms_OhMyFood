@@ -111,22 +111,22 @@ body {
 }
 
 .menus-list li:hover .menu-item__plat-desc, .menus-list li:active .menu-item__plat-desc {
-  -webkit-transition: width 1s ease-out;
-  transition: width 1s ease-out;
+  -webkit-transition: width 1s ease-out forwards;
+  transition: width 1s ease-out forwards;
   width: 55%;
 }
 
 .menus-list li:hover aside, .menus-list li:active aside {
-  -webkit-transition: right 1s ease-out;
-  transition: right 1s ease-out;
+  -webkit-transition: right 1s ease-out forwards;
+  transition: right 1s ease-out forwards;
   right: 0;
 }
 
 .menus-list li:hover aside i, .menus-list li:active aside i {
-  -webkit-transition: -webkit-transform 1s ease-out;
-  transition: -webkit-transform 1s ease-out;
-  transition: transform 1s ease-out;
-  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out forwards;
+  transition: -webkit-transform 1s ease-out forwards;
+  transition: transform 1s ease-out forwards;
+  transition: transform 1s ease-out forwards, -webkit-transform 1s ease-out forwards;
   -webkit-transform: rotate(-360deg);
           transform: rotate(-360deg);
 }

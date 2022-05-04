@@ -84,15 +84,15 @@ body {
             }
 
             .menu-item__plat-desc {
-                transition: width 1s ease-out;
+                transition: width 1s ease-out forwards;
                 width: 55%;
             }
             
             aside {
-                transition: right 1s ease-out;
+                transition: right 1s ease-out forwards;
                 right: 0;
                 i {
-                    transition: transform 1s ease-out;
+                    transition: transform 1s ease-out forwards;
                     transform: rotate(-360deg);
                 }
             }

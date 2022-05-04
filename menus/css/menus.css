@@ -159,31 +159,21 @@ main section .menu ul li {
   border-radius: 15px;
   margin: 10px auto;
   width: 95%;
+  position: relative;
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
-main section .menu ul li a {
-  margin: 0;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+main section .menu ul li article {
+  padding: 10px 10px;
 }
 
-main section .menu ul li a article {
-  width: 100%;
-}
-
-main section .menu ul li a article h4 {
+main section .menu ul li article h4 {
   font-family: "roboto_titre", "roboto_text", arial;
   font-weight: lighter;
   margin: 0;
 }
 
-main section .menu ul li a article div {
+main section .menu ul li article div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,30 +181,33 @@ main section .menu ul li a article div {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 5px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
 }
 
-main section .menu ul li a article div p {
-  font-weight: bold;
-  font-size: 12px;
+main section .menu ul li article div p {
   margin: 0;
   text-align: center;
   font-family: "roboto_text", arial, sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-main section .menu ul li a article div span {
-  font-weight: bold;
-  font-size: 12px;
+main section .menu ul li article div span {
   font-family: "roboto_titre", "roboto_text", arial;
 }
 
 main section .menu ul li aside {
   position: absolute;
-  height: 59px;
-  right: -15%;
+  top: 0;
+  bottom: 0;
+  right: -20%;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #99e2d0;
-  width: 15%;
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -230,6 +223,27 @@ main section .menu ul li aside i {
   background-color: #99e2d0;
   color: white;
   font-size: 20px;
+}
+
+main section .menu ul li:hover div, main section .menu ul li:active div, main section .menu ul li:focus div {
+  -webkit-transition: width 1s ease-out;
+  transition: width 1s ease-out;
+  width: 75%;
+}
+
+main section .menu ul li:hover aside, main section .menu ul li:active aside, main section .menu ul li:focus aside {
+  -webkit-transition: right 1s ease-out;
+  transition: right 1s ease-out;
+  right: 0;
+}
+
+main section .menu ul li:hover aside i, main section .menu ul li:active aside i, main section .menu ul li:focus aside i {
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
 }
 
 main section #btn form {
