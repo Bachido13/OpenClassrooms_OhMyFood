@@ -13,6 +13,18 @@
     src: url(police/roboto/Roboto-Medium.ttf);
 }
 
+@keyframes cascade {
+    0% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 $logo: "shrikhand", helvetica, sans-serif;
 $texte: "roboto_text", arial, sans-serif;
 $titre:"roboto_titre", "roboto_text", arial;
@@ -75,7 +87,7 @@ main {
         margin-top: -30px;
         z-index: 2;
         position: relative;        
-        padding: 20px 10px;
+        padding: 20px 10px;     
 
         #titre {
             display: flex;
@@ -157,6 +169,19 @@ main {
                     width: 95%;
                     position: relative;
                     overflow: hidden;
+                    animation: cascade 2s ease-out forwards;
+        
+                    &:nth-child(2) {
+                        animation-delay: 0.3s;
+                    }   
+                    
+                    &:nth-child(3) {
+                        animation-delay: 0.6s;
+                    }
+
+                    &:nth-child(4) {
+                        animation-delay: 0.9s;
+                    }
 
                     article {
                         padding: 10px 10px;
@@ -212,16 +237,16 @@ main {
                 }
                 li:hover, li:active, li:focus {
                     div {
-                        transition: width 1s ease-out ;
+                        transition: width 0.5s ease-out ;
                         width: 75%;
                     }
 
                     aside {
-                        transition: right 1s ease-out ;
+                        transition: right 0.5s ease-out ;
                         right: 0;
                         i {
-                            transition: transform 1s ease-out;
-                            transform: rotate(-360deg);
+                            transition: transform 0.5s ease-out;
+                            transform: rotate(360deg);
                         }
                     }
                 }
@@ -229,6 +254,7 @@ main {
         }
 
         #btn {
+            animation: cascade 2s ease-out forwards;
 
             form {
                 display: flex;

@@ -13,6 +13,32 @@
   src: url(police/roboto/Roboto-Medium.ttf);
 }
 
+@-webkit-keyframes cascade {
+  0% {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes cascade {
+  0% {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -161,6 +187,23 @@ main section .menu ul li {
   width: 95%;
   position: relative;
   overflow: hidden;
+  -webkit-animation: cascade 2s ease-out forwards;
+          animation: cascade 2s ease-out forwards;
+}
+
+main section .menu ul li:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+main section .menu ul li:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+main section .menu ul li:nth-child(4) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 main section .menu ul li article {
@@ -226,24 +269,29 @@ main section .menu ul li aside i {
 }
 
 main section .menu ul li:hover div, main section .menu ul li:active div, main section .menu ul li:focus div {
-  -webkit-transition: width 1s ease-out;
-  transition: width 1s ease-out;
+  -webkit-transition: width 0.5s ease-out;
+  transition: width 0.5s ease-out;
   width: 75%;
 }
 
 main section .menu ul li:hover aside, main section .menu ul li:active aside, main section .menu ul li:focus aside {
-  -webkit-transition: right 1s ease-out;
-  transition: right 1s ease-out;
+  -webkit-transition: right 0.5s ease-out;
+  transition: right 0.5s ease-out;
   right: 0;
 }
 
 main section .menu ul li:hover aside i, main section .menu ul li:active aside i, main section .menu ul li:focus aside i {
-  -webkit-transition: -webkit-transform 1s ease-out;
-  transition: -webkit-transform 1s ease-out;
-  transition: transform 1s ease-out;
-  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
-  -webkit-transform: rotate(-360deg);
-          transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+main section #btn {
+  -webkit-animation: cascade 2s ease-out forwards;
+          animation: cascade 2s ease-out forwards;
 }
 
 main section #btn form {
