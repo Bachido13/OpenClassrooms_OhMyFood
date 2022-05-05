@@ -13,6 +13,32 @@
   src: url(police/roboto/Roboto-Medium.ttf);
 }
 
+@-webkit-keyframes cascade-rvs {
+  0% {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes cascade-rvs {
+  0% {
+    -webkit-transform: translateY(60px);
+            transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -174,20 +200,28 @@ header h1 figure img {
   -webkit-box-shadow: silver 3px 3px 3px;
           box-shadow: silver 3px 3px 3px;
   list-style: none;
-}
-
-#fonctionnement ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
   padding: 20px 0 20px 15px;
-  color: black;
   font-family: "roboto_titre", "roboto_text", arial;
   font-size: 12px;
+  -webkit-animation: cascade-rvs 2s ease-out forwards;
+          animation: cascade-rvs 2s ease-out forwards;
 }
 
-#fonctionnement ul li a div {
+#fonctionnement ul li:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+#fonctionnement ul li:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#fonctionnement ul li div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,7 +240,7 @@ header h1 figure img {
   font-size: 10px;
 }
 
-#fonctionnement ul li a i {
+#fonctionnement ul li i {
   color: #878787;
   margin-right: 15px;
 }
@@ -240,6 +274,23 @@ header h1 figure img {
   color: black;
   text-decoration: none;
   overflow: hidden;
+  -webkit-animation: cascade-rvs 2s ease-out forwards;
+          animation: cascade-rvs 2s ease-out forwards;
+}
+
+#restaurants a:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+#restaurants a:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#restaurants a:nth-child(4) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 #restaurants a img {

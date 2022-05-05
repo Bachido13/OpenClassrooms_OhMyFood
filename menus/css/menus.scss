@@ -13,7 +13,7 @@
     src: url(police/roboto/Roboto-Medium.ttf);
 }
 
-@keyframes cascade {
+@keyframes cascade-rvs {
     0% {
         transform: translateY(60px);
         opacity: 0;
@@ -169,7 +169,7 @@ main {
                     width: 95%;
                     position: relative;
                     overflow: hidden;
-                    animation: cascade 2s ease-out forwards;
+                    animation: cascade-rvs 2s ease-out forwards;
         
                     &:nth-child(2) {
                         animation-delay: 0.3s;
@@ -254,7 +254,7 @@ main {
         }
 
         #btn {
-            animation: cascade 2s ease-out forwards;
+            animation: cascade-rvs 2s ease-out forwards;
 
             form {
                 display: flex;

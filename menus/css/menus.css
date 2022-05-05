@@ -13,7 +13,7 @@
   src: url(police/roboto/Roboto-Medium.ttf);
 }
 
-@-webkit-keyframes cascade {
+@-webkit-keyframes cascade-rvs {
   0% {
     -webkit-transform: translateY(60px);
             transform: translateY(60px);
@@ -26,7 +26,7 @@
   }
 }
 
-@keyframes cascade {
+@keyframes cascade-rvs {
   0% {
     -webkit-transform: translateY(60px);
             transform: translateY(60px);
@@ -187,8 +187,8 @@ main section .menu ul li {
   width: 95%;
   position: relative;
   overflow: hidden;
-  -webkit-animation: cascade 2s ease-out forwards;
-          animation: cascade 2s ease-out forwards;
+  -webkit-animation: cascade-rvs 2s ease-out forwards;
+          animation: cascade-rvs 2s ease-out forwards;
 }
 
 main section .menu ul li:nth-child(2) {
@@ -290,8 +290,8 @@ main section .menu ul li:hover aside i, main section .menu ul li:active aside i,
 }
 
 main section #btn {
-  -webkit-animation: cascade 2s ease-out forwards;
-          animation: cascade 2s ease-out forwards;
+  -webkit-animation: cascade-rvs 2s ease-out forwards;
+          animation: cascade-rvs 2s ease-out forwards;
 }
 
 main section #btn form {
