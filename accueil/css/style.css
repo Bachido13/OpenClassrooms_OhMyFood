@@ -247,6 +247,8 @@ header h1 figure img {
 
 #fonctionnement ul li:hover {
   background-color: #f7efff;
+  -webkit-box-shadow: #a6a6a6 4px 4px 4px;
+          box-shadow: #a6a6a6 4px 4px 4px;
 }
 
 #fonctionnement ul li:hover i {

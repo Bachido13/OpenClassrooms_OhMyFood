@@ -25,6 +25,26 @@
     }
 }
 
+@keyframes coeur-vide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes coeur-plein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 $logo: "shrikhand", helvetica, sans-serif;
 $texte: "roboto_text", arial, sans-serif;
 $titre:"roboto_titre", "roboto_text", arial;
@@ -114,7 +134,6 @@ main {
                     margin-right: -30px;
                     color:black;
                     opacity:1;
-                    transition: opacity 1s;
                 }
                   
                 .fa-solid {
@@ -123,29 +142,17 @@ main {
                     margin-right: 20px;
                     padding: 0;
                     opacity:0;
-                    transition: opacity 1s;
                 }
             }
 
-            .coeur:active {
+            .coeur:active, .coeur:focus {
 
                 .fa-regular {
-                    opacity:0;
+                    animation: coeur-vide 0.7s ease-out forwards;
                 }
 
                 .fa-solid {
-                    opacity:1;
-                }
-            }
-
-            .coeur:focus {
-
-                .fa-regular:focus {
-                    display: none;
-                }
-
-                .fa-solid:focus {
-                    display: block;
+                    animation: coeur-plein 0.7s ease-out forwards;
                 }
             }
         }
@@ -155,6 +162,8 @@ main {
             h3 {
                 font-family: $texte;
                 font-size: 14px;
+                text-decoration: underline $tertiaire 3px;
+                text-underline-offset: 5px;
             }
 
             ul {
@@ -190,6 +199,9 @@ main {
                             font-family: $titre;
                             font-weight: lighter;
                             margin: 0;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
                         }
 
                         div {
@@ -236,9 +248,16 @@ main {
                     }
                 }
                 li:hover, li:active, li:focus {
-                    div {
-                        transition: width 0.5s ease-out ;
-                        width: 75%;
+                    article {
+                        h4 {
+                            transition: width 0.8s ease-out ;
+                            width: 75%;
+                        }
+                        
+                        div {
+                            transition: width 0.8s ease-out ;
+                            width: 75%;
+                        }
                     }
 
                     aside {
@@ -246,7 +265,7 @@ main {
                         right: 0;
                         i {
                             transition: transform 0.5s ease-out;
-                            transform: rotate(360deg);
+                            transform: rotate(720deg);
                         }
                     }
                 }

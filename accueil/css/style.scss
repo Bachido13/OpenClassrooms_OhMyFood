@@ -167,6 +167,7 @@ header {
         }
         li:hover {
             background-color: #f7efff;
+            box-shadow: rgb(166, 166, 166) 4px 4px 4px;
             i {
                 color: $primaire;
             }

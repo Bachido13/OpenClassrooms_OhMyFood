@@ -39,6 +39,42 @@
   }
 }
 
+@-webkit-keyframes coeur-vide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes coeur-vide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes coeur-plein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes coeur-plein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -139,8 +175,6 @@ main section #titre .coeur .fa-regular {
   margin-right: -30px;
   color: black;
   opacity: 1;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
 }
 
 main section #titre .coeur .fa-solid {
@@ -149,29 +183,24 @@ main section #titre .coeur .fa-solid {
   margin-right: 20px;
   padding: 0;
   opacity: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
 }
 
-main section #titre .coeur:active .fa-regular {
-  opacity: 0;
+main section #titre .coeur:active .fa-regular, main section #titre .coeur:focus .fa-regular {
+  -webkit-animation: coeur-vide 0.7s ease-out forwards;
+          animation: coeur-vide 0.7s ease-out forwards;
 }
 
-main section #titre .coeur:active .fa-solid {
-  opacity: 1;
-}
-
-main section #titre .coeur:focus .fa-regular:focus {
-  display: none;
-}
-
-main section #titre .coeur:focus .fa-solid:focus {
-  display: block;
+main section #titre .coeur:active .fa-solid, main section #titre .coeur:focus .fa-solid {
+  -webkit-animation: coeur-plein 0.7s ease-out forwards;
+          animation: coeur-plein 0.7s ease-out forwards;
 }
 
 main section .menu h3 {
   font-family: "roboto_text", arial, sans-serif;
   font-size: 14px;
+  -webkit-text-decoration: underline #99e2d0 3px;
+          text-decoration: underline #99e2d0 3px;
+  text-underline-offset: 5px;
 }
 
 main section .menu ul {
@@ -214,6 +243,9 @@ main section .menu ul li article h4 {
   font-family: "roboto_titre", "roboto_text", arial;
   font-weight: lighter;
   margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 main section .menu ul li article div {
@@ -268,9 +300,15 @@ main section .menu ul li aside i {
   font-size: 20px;
 }
 
-main section .menu ul li:hover div, main section .menu ul li:active div, main section .menu ul li:focus div {
-  -webkit-transition: width 0.5s ease-out;
-  transition: width 0.5s ease-out;
+main section .menu ul li:hover article h4, main section .menu ul li:active article h4, main section .menu ul li:focus article h4 {
+  -webkit-transition: width 0.8s ease-out;
+  transition: width 0.8s ease-out;
+  width: 75%;
+}
+
+main section .menu ul li:hover article div, main section .menu ul li:active article div, main section .menu ul li:focus article div {
+  -webkit-transition: width 0.8s ease-out;
+  transition: width 0.8s ease-out;
   width: 75%;
 }
 
@@ -285,8 +323,8 @@ main section .menu ul li:hover aside i, main section .menu ul li:active aside i,
   transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
 }
 
 main section #btn {
