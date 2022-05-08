@@ -25,6 +25,36 @@
     }
 }
 
+@keyframes coeur-vide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes coeur-plein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        display: none;
+    }
+
+    100% {
+        display: block;
+    }
+}
+
 $logo: "shrikhand", helvetica, sans-serif;
 $texte: "roboto_text", arial, sans-serif;
 $titre:"roboto_titre", "roboto_text", arial;
@@ -40,13 +70,40 @@ h2 {
     font-family: $titre;
 }
 
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+      display: none;
+    }
+}
+
+.spin::before {
+    animation: 2.5s linear spinner;
+    animation-play-state: inherit;
+    border: solid 5px #cfd0d1;
+    border-bottom-color: $primaire;
+    border-radius: 50%;
+    content: "";
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate3d(-50%, -50%, 0);
+    will-change: transform;
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: center;
-    h1 {
+    figure {
         margin: 10px 0;
-        figure {
+
+        h1 {
             margin: 0;
             display: flex;
             justify-content: center;
@@ -115,6 +172,12 @@ header {
             margin: 10px 0;
             padding: 12px 20px;
             font-size: 15px;
+            box-shadow: silver 3px 3px 3px;
+        }
+
+        button:hover {
+            background: $secondaire;
+            box-shadow: rgb(154, 154, 154) 4px 4px 4px;
         }
     }
 }
@@ -246,30 +309,22 @@ header {
                     padding: 0;
                     color:black;
                     opacity:1;
-                    transition: opacity 1s;
                 }
                   
                 .fa-solid {
                     color: #9356dc;
                     position: relative;
                     opacity:0;
-                    transition: opacity 1s;
                 }
             }
-            .coeur:active {
+            .coeur:active, .coeur:focus, .coeur:hover {
+
                 .fa-regular {
-                    opacity:0;
+                    animation: coeur-vide 0.7s ease-out forwards;
                 }
+
                 .fa-solid {
-                    opacity:1;
-                }
-            }
-            .coeur:focus {
-                .fa-regular {
-                    opacity:0;
-                }
-                .fa-solid {
-                    opacity:1;
+                    animation: coeur-plein 0.7s ease-out forwards;
                 }
             }
         }
@@ -305,3 +360,6 @@ footer {
     }
 }
 
+@media screen and (min-width:768px) {
+    
+}

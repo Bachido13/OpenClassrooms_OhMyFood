@@ -39,12 +39,97 @@
   }
 }
 
+@-webkit-keyframes coeur-vide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes coeur-vide {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes coeur-plein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes coeur-plein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
+}
+
 body {
   margin: 0;
 }
 
 h2 {
   font-family: "roboto_titre", "roboto_text", arial;
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
+            transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    display: none;
+  }
+}
+
+.spin::before {
+  -webkit-animation: 2.5s linear spinner;
+          animation: 2.5s linear spinner;
+  -webkit-animation-play-state: inherit;
+          animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: #9356dc;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
 }
 
 header {
@@ -59,11 +144,11 @@ header {
           justify-content: center;
 }
 
-header h1 {
+header figure {
   margin: 10px 0;
 }
 
-header h1 figure {
+header figure h1 {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,7 +158,7 @@ header h1 figure {
           justify-content: center;
 }
 
-header h1 figure img {
+header figure h1 img {
   display: block;
   width: 50%;
 }
@@ -178,6 +263,14 @@ header h1 figure img {
   margin: 10px 0;
   padding: 12px 20px;
   font-size: 15px;
+  -webkit-box-shadow: silver 3px 3px 3px;
+          box-shadow: silver 3px 3px 3px;
+}
+
+#recherche article button:hover {
+  background: #ff79da;
+  -webkit-box-shadow: #9a9a9a 4px 4px 4px;
+          box-shadow: #9a9a9a 4px 4px 4px;
 }
 
 #fonctionnement {
@@ -348,32 +441,22 @@ header h1 figure img {
   padding: 0;
   color: black;
   opacity: 1;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
 }
 
 #restaurants a .card .coeur .fa-solid {
   color: #9356dc;
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
 }
 
-#restaurants a .card .coeur:active .fa-regular {
-  opacity: 0;
+#restaurants a .card .coeur:active .fa-regular, #restaurants a .card .coeur:focus .fa-regular, #restaurants a .card .coeur:hover .fa-regular {
+  -webkit-animation: coeur-vide 0.7s ease-out forwards;
+          animation: coeur-vide 0.7s ease-out forwards;
 }
 
-#restaurants a .card .coeur:active .fa-solid {
-  opacity: 1;
-}
-
-#restaurants a .card .coeur:focus .fa-regular {
-  opacity: 0;
-}
-
-#restaurants a .card .coeur:focus .fa-solid {
-  opacity: 1;
+#restaurants a .card .coeur:active .fa-solid, #restaurants a .card .coeur:focus .fa-solid, #restaurants a .card .coeur:hover .fa-solid {
+  -webkit-animation: coeur-plein 0.7s ease-out forwards;
+          animation: coeur-plein 0.7s ease-out forwards;
 }
 
 footer {

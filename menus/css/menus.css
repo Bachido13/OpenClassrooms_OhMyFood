@@ -101,11 +101,11 @@ header div a i {
   text-decoration: none;
 }
 
-header h1 {
-  margin: 10px 0 10px -10px;
+header figure {
+  margin: 10px 0 10px -20px;
 }
 
-header h1 figure {
+header figure h1 {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,9 +115,9 @@ header h1 figure {
           justify-content: center;
 }
 
-header h1 figure img {
+header figure h1 img {
   display: block;
-  width: 50%;
+  width: 53%;
 }
 
 main figure {
@@ -185,12 +185,12 @@ main section #titre .coeur .fa-solid {
   opacity: 0;
 }
 
-main section #titre .coeur:active .fa-regular, main section #titre .coeur:focus .fa-regular {
+main section #titre .coeur:active .fa-regular, main section #titre .coeur:focus .fa-regular, main section #titre .coeur:hover .fa-regular {
   -webkit-animation: coeur-vide 0.7s ease-out forwards;
           animation: coeur-vide 0.7s ease-out forwards;
 }
 
-main section #titre .coeur:active .fa-solid, main section #titre .coeur:focus .fa-solid {
+main section #titre .coeur:active .fa-solid, main section #titre .coeur:focus .fa-solid, main section #titre .coeur:hover .fa-solid {
   -webkit-animation: coeur-plein 0.7s ease-out forwards;
           animation: coeur-plein 0.7s ease-out forwards;
 }
@@ -218,6 +218,8 @@ main section .menu ul li {
   overflow: hidden;
   -webkit-animation: cascade-rvs 2s ease-out forwards;
           animation: cascade-rvs 2s ease-out forwards;
+  -webkit-box-shadow: silver 3px 3px 3px;
+          box-shadow: silver 3px 3px 3px;
 }
 
 main section .menu ul li:nth-child(2) {
@@ -352,6 +354,14 @@ main section #btn form button {
   font-size: 15px;
   font-family: "roboto_text", arial, sans-serif;
   font-weight: bold;
+  -webkit-box-shadow: silver 3px 3px 3px;
+          box-shadow: silver 3px 3px 3px;
+}
+
+main section #btn form button:hover {
+  background: #ff79da;
+  -webkit-box-shadow: #9a9a9a 4px 4px 4px;
+          box-shadow: #9a9a9a 4px 4px 4px;
 }
 
 footer {
