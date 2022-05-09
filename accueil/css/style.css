@@ -252,6 +252,7 @@ header figure h1 img {
 
 #recherche article p {
   font-size: 15px;
+  padding: 0 20px;
 }
 
 #recherche article button {
@@ -360,10 +361,11 @@ header figure h1 img {
 
 #restaurants a {
   display: block;
-  border-radius: 25px;
+  border-radius: 15px;
   background-color: white;
   width: 92%;
   margin: 5px 0 10px 12px;
+  padding-bottom: 0;
   -webkit-box-shadow: lightgrey 2px 2px 5px;
           box-shadow: lightgrey 2px 2px 5px;
   color: black;
@@ -388,12 +390,31 @@ header figure h1 img {
           animation-delay: 0.9s;
 }
 
-#restaurants a img {
+#restaurants a #img {
+  position: relative;
+  z-index: 1;
+}
+
+#restaurants a #img img {
   text-align: center;
   width: 100%;
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+#restaurants a #img p {
+  background-color: #99e2d0;
+  color: #009600;
+  font-family: "roboto_titre", "roboto_text", arial;
+  font-size: 10px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 5px 10px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  z-index: 2;
 }
 
 #restaurants a .card {
@@ -410,7 +431,7 @@ header figure h1 img {
   padding: 0;
 }
 
-#restaurants a .card article h2 {
+#restaurants a .card article h3 {
   font-family: "roboto_titre", "roboto_text", arial;
   font-size: 15px;
   margin: 0;
@@ -491,5 +512,74 @@ footer ul li a {
 footer ul li a i {
   margin-right: 5px;
   font-size: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  #restaurants a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 825px;
+  }
+  #restaurants a #img {
+    width: 60%;
+  }
+  #restaurants a #img img {
+    height: 100%;
+  }
+  #restaurants a .card {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #fonctionnement ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #fonctionnement ul li {
+    margin: 10px 25px;
+    width: 25%;
+  }
+  #list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #list a {
+    width: 45%;
+    margin: 25px;
+  }
+  #list a .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #list a .card h3 {
+    font-size: 24px;
+  }
+  #list a .card p {
+    font-size: 24px;
+  }
+  #list a .card .coeur {
+    padding-bottom: 20px;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer ul li {
+    margin: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
