@@ -390,12 +390,12 @@ header figure h1 img {
           animation-delay: 0.9s;
 }
 
-#restaurants a #img {
+#restaurants a .img {
   position: relative;
   z-index: 1;
 }
 
-#restaurants a #img img {
+#restaurants a .img img {
   text-align: center;
   width: 100%;
   height: 150px;
@@ -403,7 +403,7 @@ header figure h1 img {
      object-fit: cover;
 }
 
-#restaurants a #img p {
+#restaurants a .img p {
   background-color: #99e2d0;
   color: #009600;
   font-family: "roboto_titre", "roboto_text", arial;
@@ -521,10 +521,10 @@ footer ul li a i {
     display: flex;
     max-width: 825px;
   }
-  #restaurants a #img {
+  #restaurants a .img {
     width: 60%;
   }
-  #restaurants a #img img {
+  #restaurants a .img img {
     height: 100%;
   }
   #restaurants a .card {

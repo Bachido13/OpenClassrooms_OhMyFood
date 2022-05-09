@@ -285,7 +285,7 @@ header {
             animation-delay: 0.9s;
         }
         
-        #img {
+        .img {
             position: relative;
             z-index: 1;
 
@@ -412,7 +412,7 @@ footer {
         display: flex;
         max-width: 825px;
 
-        #img {
+        .img {
             width:60%;
             img {
                 height: 100%;

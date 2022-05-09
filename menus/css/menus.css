@@ -397,4 +397,50 @@ footer ul li a i {
   margin-right: 5px;
   font-size: 10px;
 }
+
+@media screen and (min-width: 768px) {
+  header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main section #titre {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  main section #titre h2 {
+    margin: auto 25px;
+  }
+  main section .menu h3 {
+    margin-left: 25px;
+  }
+  main section .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main section .menu ul li {
+    width: 30%;
+    margin: 10px 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer h1 {
+    font-size: larger;
+  }
+  footer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin-left: 20px;
+  }
+  footer ul li {
+    padding: 20px;
+  }
+}
 /*# sourceMappingURL=menus.css.map */
