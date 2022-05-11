@@ -75,21 +75,49 @@
   }
 }
 
-@-webkit-keyframes spinner {
-  0% {
-    display: none;
+@-webkit-keyframes ctn {
+  99% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   100% {
-    display: block;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes ctn {
+  99% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(480deg);
+            transform: translate3d(-50%, -50%, 0) rotate(480deg);
+    display: none;
   }
 }
 
 @keyframes spinner {
   0% {
-    display: none;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
+            transform: translate3d(-50%, -50%, 0) rotate(0deg);
   }
   100% {
-    display: block;
+    -webkit-transform: translate3d(-50%, -50%, 0) rotate(480deg);
+            transform: translate3d(-50%, -50%, 0) rotate(480deg);
+    display: none;
   }
 }
 
@@ -101,21 +129,30 @@ h2 {
   font-family: "roboto_titre", "roboto_text", arial;
 }
 
-@keyframes spinner {
-  0% {
-    -webkit-transform: translate3d(-50%, -50%, 0) rotate(0deg);
-            transform: translate3d(-50%, -50%, 0) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate3d(-50%, -50%, 0) rotate(360deg);
-            transform: translate3d(-50%, -50%, 0) rotate(360deg);
-    display: none;
-  }
+#spin-ctn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  background-color: #99e2d0b6;
+  -webkit-animation: ctn 3s forwards;
+          animation: ctn 3s forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
 }
 
-.spin::before {
-  -webkit-animation: 2.5s linear spinner;
-          animation: 2.5s linear spinner;
+#spin-ctn .spin::before {
+  -webkit-animation: 5s linear spinner forwards;
+          animation: 5s linear spinner forwards;
   -webkit-animation-play-state: inherit;
           animation-play-state: inherit;
   border: solid 5px #cfd0d1;
@@ -125,8 +162,8 @@ h2 {
   height: 40px;
   width: 40px;
   position: absolute;
-  top: 10%;
-  left: 10%;
+  top: 30%;
+  left: 50%;
   -webkit-transform: translate3d(-50%, -50%, 0);
           transform: translate3d(-50%, -50%, 0);
   will-change: transform;
@@ -390,12 +427,12 @@ header figure h1 img {
           animation-delay: 0.9s;
 }
 
-#restaurants a .img {
+#restaurants a .image {
   position: relative;
   z-index: 1;
 }
 
-#restaurants a .img img {
+#restaurants a .image img {
   text-align: center;
   width: 100%;
   height: 150px;
@@ -403,7 +440,7 @@ header figure h1 img {
      object-fit: cover;
 }
 
-#restaurants a .img p {
+#restaurants a .image p {
   background-color: #99e2d0;
   color: #009600;
   font-family: "roboto_titre", "roboto_text", arial;

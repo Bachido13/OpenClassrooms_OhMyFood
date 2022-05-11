@@ -45,13 +45,23 @@
     }
 }
 
-@keyframes spin {
-    0% {
-        display: block;
+@keyframes ctn {
+    99% {
+        transform: scale(1);
     }
 
     100% {
-        display: none;
+        transform: scale(0);
+    }
+}
+
+@keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(480deg);
+      display: none;
     }
 }
 
@@ -70,35 +80,36 @@ h2 {
     font-family: $titre;
 }
 
-@keyframes spinner {
-    0% {
-      transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-      transform: translate3d(-50%, -50%, 0) rotate(480deg);
-      display: none;
+#spin-ctn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200vh;
+    background-color: #99e2d0b6;
+    animation: ctn 3s forwards ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    
+    .spin::before {
+        animation: 5s linear spinner forwards;
+        animation-play-state: inherit;
+        border: solid 5px #cfd0d1;
+        border-bottom-color: $primaire;
+        border-radius: 50%;
+        content: "";
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        will-change: transform;
     }
 }
 
-.spin {
-    animation: spin 3s;
-}
-
-.spin::before {
-    animation: 2.5s linear spinner;
-    animation-play-state: inherit;
-    border: solid 5px #cfd0d1;
-    border-bottom-color: $primaire;
-    border-radius: 50%;
-    content: "";
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    transform: translate3d(-50%, -50%, 0);
-    will-change: transform;
-}
 
 header {
     display: flex;
@@ -289,7 +300,7 @@ header {
             animation-delay: 0.9s;
         }
         
-        .img {
+        .image {
             position: relative;
             z-index: 1;
 
