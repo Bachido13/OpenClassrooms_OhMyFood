@@ -45,13 +45,13 @@
     }
 }
 
-@keyframes spinner {
+@keyframes spin {
     0% {
-        display: none;
+        display: block;
     }
 
     100% {
-        display: block;
+        display: none;
     }
 }
 
@@ -75,9 +75,13 @@ h2 {
       transform: translate3d(-50%, -50%, 0) rotate(0deg);
     }
     100% {
-      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+      transform: translate3d(-50%, -50%, 0) rotate(480deg);
       display: none;
     }
+}
+
+.spin {
+    animation: spin 3s;
 }
 
 .spin::before {
