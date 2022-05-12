@@ -331,9 +331,6 @@ header figure h1 img {
   -webkit-box-shadow: silver 3px 3px 3px;
           box-shadow: silver 3px 3px 3px;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-decoration: none;
   padding: 20px 0 20px 15px;
   font-family: "roboto_titre", "roboto_text", arial;
@@ -352,7 +349,15 @@ header figure h1 img {
           animation-delay: 0.6s;
 }
 
-#fonctionnement ul li div {
+#fonctionnement ul li a {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#fonctionnement ul li a div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -371,7 +376,7 @@ header figure h1 img {
   font-size: 10px;
 }
 
-#fonctionnement ul li i {
+#fonctionnement ul li a i {
   color: #878787;
   margin-right: 15px;
 }
